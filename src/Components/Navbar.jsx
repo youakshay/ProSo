@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { FiMinimize2 } from "react-icons/fi";
+import profile from "../assets/dp.jpg"
 
 export const Navbar = () => {
 
@@ -8,19 +9,19 @@ export const Navbar = () => {
 
     return (
         <>
-            <div className='h-12  w-screen rounded-md flex'>
-                <div className='p-4 w-screen  text-slate-200 font-semibold  flex gap-2 justify-between mr-8'>
+            <div className='h-12 p-4 mt-2  w-screen rounded-md flex bg-black items-center'>
+                <div className='w-screen  text-slate-200 font-semibold  flex gap-2 justify-between mr-8'>
                     <div className="text-white font-semibold flex gap-4">
-                        <img src='../src/assets/dp.jpg' className='h-8 w-8 rounded-full object-scale-down object-center' alt='' />
+                        <img src={profile} className='h-8 w-8 rounded-full object-scale-down object-center' alt='' />
                         <span className='mt-1 text-slate-200'>Akshay Raj Singh</span>
                     </div>
 
 
-                    <div className={`${tabOpen ? "hidden" : "scale-100"} absolute right-2 md:hidden`}>
+                    <div className={`${tabOpen ? "hidden" : "scale-100"} absolute right-2 md:hidden mr-4`}>
                         <FiAlignJustify size={20} onClick={() => setTabOpen(true)} />
                     </div>
 
-                    <div className={`${!tabOpen ? "hidden" : "scale-100"} absolute right-2 md:hidden`}>
+                    <div className={`${!tabOpen ? "hidden" : "scale-100"} absolute right-2 md:hidden mr-4`}>
                         <FiMinimize2 size={20} onClick={() => setTabOpen(false)} />
                     </div>
 
