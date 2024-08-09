@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { FiMinimize2 } from "react-icons/fi";
 import profile from "../assets/dp.jpg"
+import { Link } from "react-scroll"
 
 export const Navbar = () => {
 
@@ -9,7 +10,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <div className='h-12 p-4 mt-2  w-screen rounded-md flex bg-black items-center'>
+            <div className='h-12 p-4 mt-2  w-screen rounded-md flex bg-black items-center fixed z-10'>
                 <div className='w-screen  text-slate-200 font-semibold  flex gap-2 justify-between mr-8'>
                     <div className="text-white font-semibold flex gap-4">
                         <img src={profile} className='h-8 w-8 rounded-full object-scale-down object-center' alt='' />
@@ -27,20 +28,39 @@ export const Navbar = () => {
 
                     <div className="hidden md:flex text-white">
                         <ul className=" ml-4 mt-1 flex  gap-4">
-                            <li>About</li>
-                            <li>Experience</li>
-                            <li>Projects</li>
-                            <li>Education</li>
+                            <li className=" cursor-pointer"><Link to="about" activeClass="active"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}>About</Link></li>
+                            <li className=" cursor-pointer"><Link to="education" spy={true}
+                                smooth={true}
+                                offset={-50}
+                                duration={500}>Education</Link></li>
+                            <li className=" cursor-pointer"><Link to="experience" spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}>Experience</Link></li>
+                            <li className=" cursor-pointer">Projects</li>
                         </ul>
                     </div>
 
-
                     <div className={`${!tabOpen ? "right-12 scale-x-0" : "right-12 scale-100"} absolute duration-300 xl:hidden `}>
                         <ul className="">
-                            <li className="p-1 border-b ">About</li>
-                            <li className="p-1 border-b ">Experience</li>
+                            <li className="p-1 border-b "><Link to="about" activeClass="active"
+                                spy={true}
+                                smooth={true}
+                                offset={0}
+                                duration={500}>About</Link></li>
+                            <li className="p-1 border-b "><Link to="experience" spy={true}
+                                smooth={true}
+                                offset={20}
+                                duration={500}>Experience</Link></li>
                             <li className="p-1 border-b ">Projects</li>
-                            <li className="p-1 border-b">Education</li>
+                            <li className="p-1 border-b "><Link to="education" spy={true}
+                                smooth={true}
+                                offset={-50}
+                                duration={500}>Education</Link></li>
                         </ul>
                     </div>
 

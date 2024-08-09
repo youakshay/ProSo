@@ -9,14 +9,14 @@ function App() {
 
   return (
     <>
-      <div className='h-dvh w-dvh  bg-black flex flex-col content-center overflow-hidden'>
+      <div className='h-dvh w-dvh  bg-black flex flex-col content-center overflow-hidden' id='about'>
           <Navbar />
           <AboutContent />
       </div>
-      <div className='h-dvh w-dvh bg-[rgb(22,22,22)]'>
+      <div className='h-dvh w-dvh bg-[rgb(22,22,22)]' id='education'>
         <Education />
       </div>
-      <div className='h-dvh w-dvh bg-[rgb(22,22,22)]'>
+      <div className='h-dvh w-dvh bg-[rgb(22,22,22)]' id='experience'>
         <Experience />
       </div>
       <div className='h-72 w-dvh bg-black'>

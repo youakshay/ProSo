@@ -3,6 +3,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ReactTyped } from "react-typed";
 
 
 export const Experience = () => {
@@ -34,9 +35,17 @@ export const Experience = () => {
 
     return (
         <>
-            <div className=" w-dvh h-dvh grid justify-items-center items-center">
-                <div className="w-80 h-96  md:w-2/4 md:h-3/4  overflow-hidden justify-center p-4">
-                    <Slider {...settings} className="m-8 gap-4">
+            <div className=" w-dvh  grid justify-items-center items-center">
+                <div>
+                <ReactTyped className="text-green-500 text-2xl md:text-5xl mt-4 font-semibold" strings={["Work Experience"]}
+                        startWhenVisible
+                        typeSpeed={80}
+                        backSpeed={50}
+                        backDelay={5}
+
+                    />                </div>
+                <div className="w-80 h-full  md:w-2/4  overflow-x-hidden justify-center p-4">
+                    <Slider {...settings} className="m-8 gap-4 hover:shadow-slate-300 hover:shadow-sm rounded-xl hover:scale-[1.025]">
                         {data.map(item =>
                         (<div className="flex bg-[rgb(48,47,47)] h-96 p-4 rounded-xl text-white ">
                             <div className="basis-1/2 flex justify-center items-center">
@@ -47,10 +56,15 @@ export const Experience = () => {
                                     <p className=" font-semibold text-xl">{item.role}</p>
                                     <p className=" font-semibold text-xl">{item.period}</p>
                                 </div>
-                                <div className="mt-2">
+                                <div className="mt-2 md:scale-100">
                                     <p>{item.desc}</p>
                                 </div>
                             </div>
+
+                            <div className="grid justify-center items-center md:hidden">
+                                <button className="bg-green-500 h-10 w-16 rounded-md">Details</button>
+                            </div>
+
                         </div>))}
                     </Slider>
                 </div>

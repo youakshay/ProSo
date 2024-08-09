@@ -35,7 +35,7 @@ export const AboutContent = () => {
 
                         />
                         <h1 className="text-white text-2xl md:text-5xl text-center">Welcome to my Portfolio</h1>
-                        <p className="text-white mt-4 text-center">I am Akshay Raj Singh, and I will be guiding you towards this website, so lets take a look</p>
+                        <p className="text-white mt-4 text-center max-w-[600px]">I am Akshay Raj Singh, Software Engineer III at American Express, and I will be guiding you towards this website, so lets take a look</p>
                         <button className="bg-green-500 text-white text-s md:text-xl p-2 rounded-md mt-4" onClick={download}><div className="flex gap-1">Resume <IoDownloadOutline size={20} className="mt-1" /></div></button>
                     </div>
 
