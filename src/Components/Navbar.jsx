@@ -41,8 +41,10 @@ export const Navbar = () => {
                                 smooth={true}
                                 offset={-70}
                                 duration={500}>Experience</Link></li>
-                            <li className=" cursor-pointer">Projects</li>
-                        </ul>
+                            <li className=" cursor-pointer"><Link to="contacts" spy={true}
+                                smooth={true}
+                                offset={-70}
+                                duration={500}>Contact me</Link></li>                        </ul>
                     </div>
 
                     <div className={`${!tabOpen ? "right-12 scale-x-0" : "right-12 scale-100"} absolute duration-300 xl:hidden `}>

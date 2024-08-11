@@ -4,6 +4,7 @@ import { Navbar } from './Components/Navbar'
 import { AboutContent } from './Components/AboutContent'
 import { Education } from './Components/Education'
 import { Experience } from './Components/Experience'
+import { Footer } from './Components/Footer'
 
 function App() {
 
@@ -19,8 +20,8 @@ function App() {
       <div className='h-dvh w-dvh bg-[rgb(22,22,22)]' id='experience'>
         <Experience />
       </div>
-      <div className='h-72 w-dvh bg-black'>
-
+      <div className='h-72 w-dvh bg-black' id='contacts'>
+        <Footer />
       </div>
     </>
   )

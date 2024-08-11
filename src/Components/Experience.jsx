@@ -45,7 +45,7 @@ export const Experience = () => {
 
                     />                </div>
                 <div className="w-80 h-full  md:w-2/4  overflow-x-hidden justify-center p-4">
-                    <Slider {...settings} className="m-8 gap-4 hover:shadow-slate-300 hover:shadow-sm rounded-xl hover:scale-[1.025]">
+                    <Slider {...settings} className="m-8 gap-4 hover:shadow-[rgb(48,47,47)] hover:shadow-sm rounded-xl hover:scale-[1.025] duration-100">
                         {data.map(item =>
                         (<div className="flex bg-[rgb(48,47,47)] h-96 p-4 rounded-xl text-white ">
                             <div className="basis-1/2 flex justify-center items-center">
